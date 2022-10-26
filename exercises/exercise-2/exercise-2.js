@@ -70,3 +70,25 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+let[firstName,lastName,house,pet,occupation] = hogwarts;
+function Gryffindor(obj){
+  obj.forEach(element => {
+    if(element.house==="Gryffindor"){
+      console.log(`${element.firstName}  ${element.lastName}`)
+    }
+    
+  });
+
+}
+Gryffindor(hogwarts)
+   
+
+function TeacherAndPed(person){
+  person.forEach(element => {
+    if(element.occupation ==="Teacher" && element.pet !== null){
+      console.log(`${element.firstName} ${element.lastName}`)
+    }
+  })
+}
+
+TeacherAndPed(hogwarts)
