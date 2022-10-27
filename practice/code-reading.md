@@ -8,11 +8,13 @@ Take a look at the following code:
 1    let x = 1;
 2    function f1()
 3    {
-4        let x = 2;
+4        let x = 2; 
 5        console.log(x);
 6    }
 7    console.log(x);
 ```
+The line 4 print the variable inside the scope (2) when the function is called
+ The line 6 print the variable in the global scope because the inner variable is not accessible (1)
 
 Explain why line 4 and line 6 output different numbers.
 
@@ -35,6 +37,8 @@ console.log(y)
 
 What will be the output of this code. Explain your answer in 50 words or less.
 
+
+10 because x is defined globally, whereas console.log(y) // undefined because it is not called within the scope of y
 ## Question 3
 
 Take a look at the following code:
@@ -62,3 +66,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+`console.log(x)` will print 9 because x is a constant
+- `console.log(y)` will print `y = { x: 10 }` because objects are mutable
